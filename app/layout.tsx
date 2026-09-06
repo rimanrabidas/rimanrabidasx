@@ -3,7 +3,7 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Your Name | Full Stack Developer",
+  title: "Riman Rabidas | Full Stack Developer",
   description: "Portfolio of a Full Stack Developer",
 
   openGraph: {
