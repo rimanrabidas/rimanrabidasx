@@ -1,15 +1,22 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://rimanrabidas.vercel.app";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Riman Rabidas | Full Stack Developer",
   description: "Portfolio of a Full Stack Developer",
-
+  icons: {
+    icon: "/mylogo.png",
+    shortcut: "/mylogo.png",
+    apple: "/mylogo.png",
+  },
   openGraph: {
     title: "Riman Rabidas | Full Stack Developer",
     description: "Portfolio of a Full Stack Developer",
-    url: "https://rimanrabidas.vercel.app",
+    url: siteUrl,
     siteName: "Riman Rabidas",
     images: [
       {
@@ -23,7 +30,6 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
-
 
 export default function RootLayout({
   children,
